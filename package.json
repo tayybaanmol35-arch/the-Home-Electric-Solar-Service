@@ -1,0 +1,22 @@
+{
+  "name": "solar_project",
+  "version": "1.0.0",
+  "description": "The Home Electric & Solar Service Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "solar",
+    "electric",
+    "website",
+    "nodejs",
+    "express"
+  ],
+  "author": "IIUI",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

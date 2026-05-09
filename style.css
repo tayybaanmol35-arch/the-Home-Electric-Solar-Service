@@ -1,0 +1,485 @@
+:root {
+    --primary-blue: #0a192f;
+    --secondary-blue: #112240;
+    --yellow: #ffcc00;
+    --text-white: #e6f1ff;
+    --text-gray: #8892b0;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--primary-blue);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Floating WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    z-index: 1000;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* --- Navbar --- */
+.navbar {
+    background: var(--primary-blue);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo span { color: var(--yellow); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover { color: var(--yellow); }
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-yellow {
+    background: var(--yellow);
+    color: var(--primary-blue);
+}
+
+.btn-yellow:hover { background: #e6b800; transform: translateY(-3px); }
+
+.btn-outline {
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    margin-left: 10px;
+}
+
+.btn-outline:hover { background: var(--yellow); color: var(--primary-blue); }
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1620288627223-53302f4e8c74?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(10, 25, 47, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span { color: var(--yellow); }
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* --- Features --- */
+.features {
+    background: var(--yellow);
+    padding: 40px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+}
+
+.feature-item h3 { font-size: 1.1rem; }
+
+/* --- Services --- */
+.services { padding: 80px 0; background: #f9f9f9; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: var(--yellow);
+    margin: 10px auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.service-card:hover { transform: translateY(-10px); }
+
+.card-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content { padding: 25px; }
+
+.card-content h3 { margin-bottom: 15px; font-size: 1.4rem; }
+
+.read-more {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* --- Why Choose Us --- */
+.why-us { padding: 80px 0; background: var(--primary-blue); color: white; }
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.why-item i {
+    font-size: 3rem;
+    color: var(--yellow);
+    margin-bottom: 20px;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--secondary-blue);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links ul { list-style: none; }
+
+.footer-links ul li { margin-bottom: 10px; }
+
+/*.footer-links ul li a { color: var(--text-gray); text-decoration: none; transition: var(--transition); }*/
+/* --- FOOTER QUICK LINKS STYLING --- */
+
+/* 1. Set the default state to White */
+.footer-links ul li a {
+    color: #ffffff; /* Pure White */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+/* 2. Hover & Active State: Turn Theme Yellow */
+.footer-links ul li a:hover, 
+.footer-links ul li a:active,
+.footer-links ul li a:focus {
+    color: #ffcc00; /* Theme Yellow */
+    transform: translateX(5px); /* Subtle slide effect for a premium feel */
+}
+
+/* 3. Optional: Add a small yellow dot before the links on hover */
+.footer-links ul li a:hover::before {
+    content: '»';
+    margin-right: 8px;
+    color: #ffcc00;
+}
+.footer-links ul li a:hover { color: var(--yellow); }
+.footer-socials a i {
+    color: #ffcc00 !important; /* Theme Yellow */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Targets the contact info icons (Phone, Email, Map) */
+.footer-contact .contact-item i {
+    color: #ffcc00 !important; /* Theme Yellow */
+    margin-right: 10px;
+}
+
+/* Hover effect: Makes them slightly brighter or larger when touched */
+.footer-socials a:hover i {
+    color: #ffe066 !important; /* Lighter yellow on hover */
+    transform: scale(1.2);
+}
+
+/* If you have the email icon specifically as a link in the contact section */
+.footer-contact a i {
+    color: #ffcc00 !important;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    color: var(--text-gray);
+}
+
+/* --- Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-links, .nav-btns { display: none; }
+    .menu-toggle { display: block; }
+    .hero h1 { font-size: 2.5rem; }
+}
+/* Modal Background */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(10, 25, 47, 0.9); /* Deep navy overlay */
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: modalSlide 0.4s ease;
+}
+
+@keyframes modalSlide {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+#modalBody h2 { color: var(--primary-blue); margin-bottom: 20px; }
+#modalBody p { color: #555; line-height: 1.8; }
+/* About Section */
+.about-flex { display: flex; align-items: center; gap: 50px; padding: 40px 0; }
+.about-text { flex: 1; }
+.about-img { flex: 1; }
+.about-img img { width: 100%; border-radius: 15px; }
+
+/* Catchy Dark Theme Style */
+.about-section {
+    padding: 100px 0;
+    background-color: var(--primary-blue); /* Deep Navy */
+    color: var(--text-white);
+}
+
+.about-section .section-title h2 {
+    color: var(--yellow); /* Makes title stand out */
+}
+
+.about-text p {
+    color: #b0b8d1; /* Soft gray-blue for readability on dark bg */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 15px;
+    filter: grayscale(20%); /* Modern professional look */
+    border: 2px solid var(--yellow);
+    padding: 10px; /* Creates a frame effect */
+}
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.gallery-grid img:hover { transform: scale(1.05); }
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 250px;
+    border: 3px solid transparent;
+    transition: var(--transition);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    border-color: var(--yellow); /* Theme hover border */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.why-choose-us, .gallery-section {
+    padding: 80px 0; /* Consistent top and bottom spacing for both sections */
+}
+/* Ensure the modal is hidden by default and sits on top */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999; /* High z-index to stay above everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background overlay */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    color: #1a2a6c; /* Navy Blue text for the title */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #ffcc00; /* Turns yellow on hover */
+}
